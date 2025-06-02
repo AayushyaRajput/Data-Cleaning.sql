@@ -1,45 +1,66 @@
-## Data-Cleaning.sql
-This project involves cleaning and preparing a dataset of tech layoffs from 2024 using SQL. The data was sourced from Kaggle and cleaned by removing duplicates, standardizing formats, handling null values, and preparing it for further analysis.
+📊 Data Cleaning with SQL — Tech Layoffs 2024
+This project focuses on cleaning and preparing a real-world dataset of tech layoffs from 2024 using SQL. The goal is to make the data consistent, reliable, and ready for further analysis such as EDA, dashboards, or machine learning applications.
 
-Dataset Source: Kaggle - Layoffs 2024
-Tools Used: MySQL (Structured Query Language)
-Objective: Clean and standardize real-world layoff data from 2022 to make it suitable for analysis.
+📁 Dataset Source
+Kaggle: Layoffs 2024 (Provide exact link if available)
 
-🛠️ Cleaning Steps Performed:
-Staging Table Creation:
+🛠️ Tools Used
+MySQL — Structured Query Language for data manipulation and cleaning
 
-Created a copy of the original dataset (layoffs_staging) to ensure the raw data remains untouched during cleaning.
+🎯 Objective
+To clean and standardize raw layoff data to ensure it’s analysis-ready — addressing duplicates, inconsistent formats, missing values, and more.
 
-Duplicate Removal:
+🧼 Cleaning Workflow
+🗂️ 1. Staging Table Creation
+Created a staging table layoffs_staging to preserve the raw dataset.
 
-Used ROW_NUMBER() with a PARTITION BY clause to identify duplicate rows based on multiple key columns.
+Ensured original data remains untouched during transformations.
 
-Removed true duplicates while preserving legitimate repeated entries.
+🧮 2. Duplicate Removal
+Applied ROW_NUMBER() with PARTITION BY to detect duplicates across key columns (company, location, etc.).
 
-Standardizing and Correcting Data:
+Removed exact duplicates while keeping valid repeated entries.
 
-Replaced blank industry values with NULL.
+🛠️ 3. Data Standardization
+Replaced empty industry values with NULL.
 
-Used self-join logic to fill in missing industry fields based on company matches.
+Populated missing industry data using a self-join based on matching company names.
 
-Standardized inconsistent industry names like "CryptoCurrency" → "Crypto".
+Standardized inconsistent labels like:
 
-Cleaned country values (e.g., removed periods from "United States.").
+"CryptoCurrency" → "Crypto"
 
-Converted the date column from TEXT to proper DATE format using STR_TO_DATE().
+Cleaned country names:
 
-Handling Nulls:
+"United States." → "United States"
 
-Kept important columns like total_laid_off, percentage_laid_off, and funds_raised_millions as NULL when appropriate.
+Converted string date fields into SQL DATE format using STR_TO_DATE().
 
-Removed rows with both total_laid_off and percentage_laid_off missing (incomplete records).
+❓ 4. Null Handling
+Retained NULL in fields like total_laid_off, percentage_laid_off, and funds_raised_millions where data was missing but valid.
 
-Column Cleanup:
+Removed rows where both total_laid_off and percentage_laid_off were missing — these were incomplete records.
 
-Dropped helper column row_num after it was used to filter duplicates.
+🧹 5. Column Cleanup
+Dropped the temporary row_num column used during duplicate filtering.
 
-✅ Final Output:
-A cleaned, structured version of the layoffs dataset in the layoffs_staging2 table.
+✅ Final Output
+A clean, structured, and reliable version of the layoff dataset stored in the layoffs_staging2 table.
 
-The data is now ready for further Exploratory Data Analysis (EDA), dashboards, or machine learning models.
+🧪 Ready for:
+
+Exploratory Data Analysis (EDA)
+
+Dashboard visualizations
+
+Machine Learning workflows
+
+📌 Summary
+✅ Cleaned & deduplicated
+
+✅ Standardized formats
+
+✅ Null values handled
+
+✅ Analysis-ready dataset
 
