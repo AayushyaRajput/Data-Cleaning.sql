@@ -1,7 +1,7 @@
-# Data-Cleaning.sql
-This project involves cleaning and preparing a dataset of tech layoffs from 2022 using SQL. The data was sourced from Kaggle and cleaned by removing duplicates, standardizing formats, handling null values, and preparing it for further analysis.
+## Data-Cleaning.sql
+This project involves cleaning and preparing a dataset of tech layoffs from 2024 using SQL. The data was sourced from Kaggle and cleaned by removing duplicates, standardizing formats, handling null values, and preparing it for further analysis.
 
-Dataset Source: Kaggle - Layoffs 2022
+Dataset Source: Kaggle - Layoffs 2024
 Tools Used: MySQL (Structured Query Language)
 Objective: Clean and standardize real-world layoff data from 2022 to make it suitable for analysis.
 
