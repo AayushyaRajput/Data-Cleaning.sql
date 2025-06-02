@@ -1,4 +1,4 @@
-📊 Data Cleaning with SQL — Tech Layoffs 2024
+#📊 Data Cleaning with SQL — Tech Layoffs 2024
 This project focuses on cleaning and preparing a real-world dataset of tech layoffs from 2024 using SQL. The goal is to make the data consistent, reliable, and ready for further analysis such as EDA, dashboards, or machine learning applications.
 
 📁 Dataset Source
